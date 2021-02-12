@@ -24,11 +24,37 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <script src="https://static.vouched.id/widget/vouched-2.0.0.js"></script>
+  <script type='text/javascript'>
+
+
+  (function() {
+    var vouched = Vouched({
+      appId: "7dyEY40eRd#~#gpT4UfWjG_2Qsus*@",
+      crossDevice: true,
+      crossDeviceQRCode: true,
+      onDone: (job)=> {
+      // token used to query jobs
+      console.log(job)
+      // query the job with the token
+      // Simulate an HTTP redirect:
+    },
+      theme: {
+      name: 'avant',
+    },
+  });
+  vouched.mount("#vouched-element");
+
+})();
+
+  </script>
+
+    <title>Vouched Integration Site</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Test Out Integration for our JSPlugin and our API on this app.</noscript>
     <div id="root"></div>
+    <div id='vouched-element' style="height: 100%"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +65,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    
   </body>
 </html>
